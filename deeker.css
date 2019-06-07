@@ -1,9 +1,16 @@
-#word {
+h1 {
     position: relative;
-    left: 100px;
+    left: 20px;
 }
 
-#search {
+h3 {
     position: relative;
-    left: 100px;
+    left: 20px;
+}
+
+body{
+    background-color: mistyrose;
+}
+#table {
+    background-color: white;
 }

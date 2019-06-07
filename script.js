@@ -1,5 +1,3 @@
-//https://github.com/zdict/zdict/wiki/Urban-dictionary-API-documentation
-
 
 $(document).ready(function(){
     $("#search").on("click", function(){
@@ -26,10 +24,27 @@ function running(data){
 
 function showResult(data){
   //  console.log( JSON.parse(data));
+    $("#resultTable").empty();
     var html = "";
+    html += "<br><table id='table' class='table table-striped' style='width: 1200px;'>";
+    html += "<tr style='font-weight:bold'><td>Author</td><td>Definition</td><td>Example</td><td>Link</td></tr>"
     for (var i=0; i< data.list.length; i++){
        var definition = data.list[i];
-        console.log( definition );
-        html += "<table><td></td>"
+       console.log( definition );
+       html += "<tr><td>";
+       html += data.list[i].author;
+       html += "</td><td>";
+       html += data.list[i].definition;
+       html += "</td><td>";
+       html += data.list[i].example;
+       html += "</td><td>";
+       html += "<a href='" + data.list[i].permalink + " ' target='_blank' >";
+       html += data.list[i].word;
+       html += "</td></tr>";
     }
+    html += "</table>";
+    console.log();
+    $("#resultTable").append(html);
+
 }
+
