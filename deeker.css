@@ -1,16 +1,29 @@
 h1 {
     position: relative;
     left: 20px;
+    color: #1b2238;
 }
+
 
 h3 {
     position: relative;
     left: 20px;
+    color: #1b2238;
 }
+
 
 body{
     background-color: mistyrose;
 }
+
+
 #table {
     background-color: white;
+}
+
+
+#photo {
+    position: absolute;
+    top: 30px;
+    right: 20px;
 }
